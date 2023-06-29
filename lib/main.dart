@@ -1,0 +1,28 @@
+import 'package:flutter/material.dart';
+import 'package:jogjatour/pages/homepages.dart';
+import 'package:jogjatour/pages/login_pages.dart';
+import 'package:jogjatour/pages/main_pages.dart';
+import 'package:jogjatour/pages/on_board.dart';
+import 'package:jogjatour/pages/splash_page.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      routes: {
+        '/': (context) => SplashPages(),
+        '/on-boarding': (context) => OnBoardingPages(),
+        '/login' :(context) => LoginPages(),
+        '/mainpage' :(context) => MainPages(),
+        '/homepage' :(context) => HomePages(),
+      },
+    );
+  }
+}
