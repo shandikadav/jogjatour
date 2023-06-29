@@ -55,21 +55,21 @@ class _OnBoardingPagesState extends State<OnBoardingPages> {
                       )),
                       child: SafeArea(
                         child: Padding(
-                          padding: const EdgeInsets.all(80),
+                          padding: const EdgeInsets.all(50),
                           child: Column(
                             children: [
                               Image.asset(
                                 contents[i].image,
-                                width: 150,
-                                height: 300,
+                                width: 100,
+                                height: 200,
                               ),
                               SizedBox(
-                                height: 30,
+                                height: 40,
                               ),
                               Text(
                                 contents[i].title,
                                 style: TextStyle(
-                                  fontSize: 30,
+                                  fontSize: 24,
                                   fontWeight: FontWeight.w600,
                                   color: Colors.white,
                                 ),
@@ -81,7 +81,7 @@ class _OnBoardingPagesState extends State<OnBoardingPages> {
                                 contents[i].desc,
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
-                                  fontSize: 16,
+                                  fontSize: 13,
                                   fontWeight: FontWeight.w300,
                                   color: Colors.white,
                                 ),

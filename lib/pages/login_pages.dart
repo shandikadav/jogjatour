@@ -14,19 +14,19 @@ class LoginPages extends StatelessWidget {
       child: Scaffold(
         backgroundColor: Color.fromARGB(245, 248, 255, 255),
         body: Padding(
-          padding: const EdgeInsets.all(25),
+          padding: const EdgeInsets.all(30),
           child: ListView(
             // crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(height: 110),
+              SizedBox(height: 40),
               Center(
                 child: Image.asset(
                   'assets/logo_jtour_blue.png',
-                  width: 271,
+                  width: 250,
                   height: 111,
                 ),
               ),
-              SizedBox(height: 108),
+              SizedBox(height: 40),
               TextField(
                 decoration: InputDecoration(
                   filled: true,

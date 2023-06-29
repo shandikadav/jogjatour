@@ -18,18 +18,18 @@ class ProfilePage extends StatelessWidget {
               Text(
                 'Profile',
                 style: blackTextStyle.copyWith(
-                  fontSize: 24,
+                  fontSize: 20,
                   fontWeight: semiBold,
                 ),
               ),
               SizedBox(
-                height: 25,
+                height: 20,
               ),
               Row(
                 children: [
                   Image.asset(
                     'assets/logo_profile.png',
-                    width: 126,
+                    width: 80,
                   ),
                   SizedBox(
                     width: 17,
@@ -43,12 +43,12 @@ class ProfilePage extends StatelessWidget {
                         maxLines: 2,
                         overflow: TextOverflow.ellipsis,
                         style: blackTextStyle.copyWith(
-                            fontSize: 22, fontWeight: semiBold),
+                            fontSize: 18, fontWeight: semiBold),
                       ),
                       Text(
                         '@GuidoAugusta',
                         style: blackTextStyle.copyWith(
-                          fontSize: 14,
+                          fontSize: 11,
                         ),
                       ),
                     ],
@@ -56,68 +56,73 @@ class ProfilePage extends StatelessWidget {
                 ],
               ),
               SizedBox(
-                height: 34,
+                height: 20,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  ElevatedButton(
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => ProfilePage()),
-                      );
-                    },
-                    child: Text(
-                      'Edit Profile',
-                      style: whiteTextStyle.copyWith(
-                        fontSize: 17,
-                        fontWeight: semiBold,
+                  SizedBox(
+                    width: 120,
+                    height: 35,
+                    child: ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => ProfilePage()),
+                        );
+                      },
+                      child: Text(
+                        'Edit Profile',
+                        style: whiteTextStyle.copyWith(
+                          fontSize: 13,
+                          fontWeight: semiBold,
+                        ),
                       ),
-                    ),
-                    style: ElevatedButton.styleFrom(
-                      primary: Color.fromARGB(255, 8, 130, 149),
-                      minimumSize: Size(144, 44),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10),
+                      style: ElevatedButton.styleFrom(
+                        primary: Color.fromARGB(255, 8, 130, 149),
+                        minimumSize: Size(144, 44),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10),
+                        ),
                       ),
                     ),
                   ),
                   SizedBox(
-                    width: 48,
-                  ),
-                  ElevatedButton(
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => LoginPages()),
-                      );
-                    },
-                    child: Text(
-                      'Keluar',
-                      style: blackTextStyle.copyWith(
-                        fontSize: 17,
-                        fontWeight: semiBold,
+                    width: 120,
+                    height: 35,
+                    child: ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => LoginPages()),
+                        );
+                      },
+                      child: Text(
+                        'Keluar',
+                        style: blackTextStyle.copyWith(
+                          fontSize: 13,
+                          fontWeight: semiBold,
+                        ),
                       ),
-                    ),
-                    style: ElevatedButton.styleFrom(
-                      side: const BorderSide(
-                        width: 2,
-                        color: Color(0xFFBFBFDB),
-                        style: BorderStyle.solid,
+                      style: ElevatedButton.styleFrom(
+                        side: const BorderSide(
+                          width: 2,
+                          color: Color(0xFFBFBFDB),
+                          style: BorderStyle.solid,
+                        ),
+                        primary: backgroundColor2,
+                        minimumSize: Size(144, 44),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        shadowColor: Colors.transparent,
                       ),
-                      primary: backgroundColor2,
-                      minimumSize: Size(144, 44),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      shadowColor: Colors.transparent,
                     ),
                   )
                 ],
               ),
               SizedBox(
-                height: 18.5,
+                height: 20,
               ),
               NameItem(text1: 'Email'),
               MenuItem(
@@ -125,7 +130,7 @@ class ProfilePage extends StatelessWidget {
                 image: 'assets/logo_email.png',
               ),
               SizedBox(
-                height: 18.5,
+                height: 14,
               ),
               NameItem(text1: 'Username'),
               MenuItem(
@@ -133,7 +138,7 @@ class ProfilePage extends StatelessWidget {
                 image: 'assets/user.png',
               ),
               SizedBox(
-                height: 18.5,
+                height: 14,
               ),
               NameItem(text1: 'Nomor Telepon'),
               MenuItem(
@@ -141,7 +146,7 @@ class ProfilePage extends StatelessWidget {
                 image: 'assets/phone.png',
               ),
               SizedBox(
-                height: 18.5,
+                height: 14,
               ),
               NameItem(text1: 'Nomor Telepon'),
               MenuItem(
@@ -170,7 +175,7 @@ class NameItem extends StatelessWidget {
         Text(
           text1,
           style: blackTextStyle.copyWith(
-            fontSize: 16,
+            fontSize: 11,
           ),
         )
       ],
@@ -186,7 +191,7 @@ class MenuItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 55,
+      height: 45,
       width: double.infinity,
       decoration: BoxDecoration(
         border: Border.all(
@@ -203,15 +208,15 @@ class MenuItem extends StatelessWidget {
           children: [
             Row(
               children: [
-                Image.asset(image),
+                Image.asset(image, height: 15,width: 15,),
                 SizedBox(
-                  width: 10,
+                  width: 5,
                 ),
                 Text(
                   text2,
                   style: TextStyle(
                     color: Color.fromARGB(255, 131, 130, 130),
-                    fontSize: 15,
+                    fontSize: 12,
                   ),
                 )
               ],

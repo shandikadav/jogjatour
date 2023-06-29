@@ -16,7 +16,7 @@ class HomePages extends StatelessWidget {
       child: Scaffold(
         backgroundColor: Color.fromARGB(245, 248, 255, 255),
         body: Padding(
-          padding: EdgeInsets.all(30),
+          padding: EdgeInsets.all(20),
           child: ListView(
             children: [
               Row(
@@ -24,11 +24,11 @@ class HomePages extends StatelessWidget {
                 children: [
                   Image.asset(
                     'assets/logo_jtour_black.png',
-                    height: 28,
+                    height: 20,
                     width: 80,
                   ),
                   SizedBox(
-                    width: 150,
+                    width: 120,
                   ),
                   IconButton(
                     icon: Image.asset(
@@ -44,12 +44,12 @@ class HomePages extends StatelessWidget {
                   ),
                   Image.asset(
                     'assets/profile.png',
-                    height: 55,
-                    width: 55,
+                    height: 50,
+                    width: 50,
                   )
                 ],
               ),
-              SizedBox(height: 20,),
+              SizedBox(height: 18,),
               TextField(
                 decoration: InputDecoration(
                   filled: true,
@@ -59,9 +59,12 @@ class HomePages extends StatelessWidget {
                   border: InputBorder.none,
                   prefixIcon: Icon(Icons.search),
                 ),
+                style: TextStyle(
+                  fontSize: 11
+                ),
               ),
               
-              SizedBox(height: 10,),
+              SizedBox(height: 2,),
               Row(
                 children: [
                   Container(
@@ -73,19 +76,19 @@ class HomePages extends StatelessWidget {
                             style: TextStyle(
                               fontWeight: FontWeight.w400,
                               color: Colors.black,
-                              fontSize: 20,
+                              fontSize: 16,
                             )
                           ),
                         ),
                   ),
                 ],
               ),
-              SizedBox(height: 10,),
+              SizedBox(height: 4,),
               CarouselSlider(options: CarouselOptions(
                 aspectRatio: 2.0,
                 enlargeCenterPage: true,
                 viewportFraction: 0.6,
-                height: 240,
+                height: 170,
                 autoPlay: true,
               ),
               items: contents
@@ -97,8 +100,8 @@ class HomePages extends StatelessWidget {
                         child:
                             Image.network(item.img, 
                             fit: BoxFit.cover, 
-                            width: 1000, 
-                            height: 253,
+                            width: double.infinity, 
+                            height: 170,
                             ),
                   ),
                   onTap: () {
@@ -109,21 +112,21 @@ class HomePages extends StatelessWidget {
                   },
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(top: 190),
+                  padding: const EdgeInsets.only(top: 135),
                   child: Container(
-                    height: 55,
+                    height: 35,
                     color: Color.fromARGB(150, 0, 0, 0),
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(top:204, left: 20),
+                  padding: const EdgeInsets.only(top:145, left: 10),
                   child: Text(
                     item.title,
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
-                      fontSize: 18,
+                      fontSize: 14,
                     ),),
                 )
               ],
@@ -131,7 +134,7 @@ class HomePages extends StatelessWidget {
                 )
             .toList(),
               ),
-              SizedBox(height: 10,),
+              SizedBox(height: 2,),
               Row(
                 children: [
                   Container(
@@ -143,7 +146,7 @@ class HomePages extends StatelessWidget {
                             style: TextStyle(
                               fontWeight: FontWeight.w400,
                               color: Colors.black,
-                              fontSize: 20,
+                              fontSize: 16,
                             )
                           ),
                         ),
@@ -157,68 +160,60 @@ class HomePages extends StatelessWidget {
                   Column(
                     children: [
                       Container(
-                        height: 60,
-                        width: 60,
+                        height: 30,
+                        width: 30,
                         color: Color.fromARGB(255, 252, 153, 145),
                         child: Image.asset('assets/makanan.png',
-                        height: 30,
-                        width: 30,
+                        height: 15,
+                        width: 15,
                         ),
                       ),
                       Padding(
                         padding: const EdgeInsets.only(top: 8.0),
-                        child: Text("Wisata Kuliner"),
+                        child: Text("Wisata Kuliner",
+                        style: TextStyle(
+                          fontSize: 11
+                        ),),
                       )
                     ],
                   ),
                   Column(
                     children: [
                       Container(
-                        height: 60,
-                        width: 60,
+                        height: 30,
+                        width: 30,
                         color: Color.fromARGB(255, 147, 193, 117),
                         child: Image.asset('assets/alam.png',
-                        height: 30,
-                        width: 30,
+                        height: 15,
+                        width: 15,
                         ),
                       ),
                       Padding(
                         padding: const EdgeInsets.only(top: 8.0),
-                        child: Text("Wisata Alam"),
+                        child: Text("Wisata Alam",
+                        style: TextStyle(
+                          fontSize: 11
+                        ),),
                       )
                     ],
                   ),
                   Column(
                     children: [
                       Container(
-                        height: 60,
-                        width: 60,
+                        height: 30,
+                        width: 30,
                         color: Color.fromARGB(255, 126, 142, 248),
                         child: Image.asset('assets/sejarah.png',
-                        height: 30,
-                        width: 30,
+                        height: 15,
+                        width: 15,
                         ),
                       ),
                       Padding(
                         padding: const EdgeInsets.only(top: 8.0),
-                        child: Text("Wisata Budaya"),
-                      )
-                    ],
-                  ),
-                  Column(
-                    children: [
-                      Container(
-                        height: 60,
-                        width: 60,
-                        color: Color.fromARGB(255, 251, 186, 184),
-                        child: Image.asset('assets/Mosque.png',
-                        height: 30,
-                        width: 30,
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 8.0),
-                        child: Text("Wisata Religi"),
+                        child: Text("Wisata Budaya",
+                        style: TextStyle(
+                          fontSize: 11
+                        ),),
                       )
                     ],
                   ),
@@ -226,42 +221,65 @@ class HomePages extends StatelessWidget {
               ),
               SizedBox(height: 20,),
               Row(
-                mainAxisAlignment: MainAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.only(right:2),
-                    child: Column(
-                      children: [
-                        Container(
-                          height: 60,
-                          width: 60,
-                          color: Color.fromARGB(255, 167, 147, 244),
-                          child: Image.asset('assets/topi.png',
-                          height: 30,
-                          width: 30,
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(top: 8.0),
-                          child: Text("Wisata Cerdas"),
-                        )
-                      ],
-                    ),
-                  ),
                   Column(
                     children: [
                       Container(
-                        height: 60,
-                        width: 60,
-                        color: Color.fromARGB(255, 255, 231, 161),
-                        child: Image.asset('assets/farm.png',
                         height: 30,
                         width: 30,
+                        color: Color.fromARGB(255, 251, 186, 184),
+                        child: Image.asset('assets/Mosque.png',
+                        height: 15,
+                        width: 15,
                         ),
                       ),
                       Padding(
                         padding: const EdgeInsets.only(top: 8.0),
-                        child: Text("Wisata Pertanian"),
+                        child: Text("Wisata Religi",
+                        style: TextStyle(
+                          fontSize: 11
+                        ),),
+                      )
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      Container(
+                        height: 30,
+                        width: 30,
+                        color: Color.fromARGB(255, 167, 147, 244),
+                        child: Image.asset('assets/topi.png',
+                        height: 15,
+                        width: 15,
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(top: 8.0),
+                        child: Text("Wisata Cerdas",
+                        style: TextStyle(
+                          fontSize: 11
+                        ),),
+                      )
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      Container(
+                        height: 30,
+                        width: 30,
+                        color: Color.fromARGB(255, 255, 231, 161),
+                        child: Image.asset('assets/farm.png',
+                        height: 15,
+                        width: 15,
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(top: 8.0),
+                        child: Text("Wisata Pertani",
+                        style: TextStyle(
+                          fontSize: 11
+                        ),),
                       ),
                     ],
                   ),
