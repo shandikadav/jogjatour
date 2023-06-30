@@ -9,16 +9,16 @@ class ProfilePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Color.fromARGB(255, 255, 255, 255),
+        backgroundColor: Color.fromARGB(245, 248, 255, 255),
         body: Padding(
-          padding: EdgeInsets.all(30),
+          padding: EdgeInsets.all(20),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
                 'Profile',
                 style: blackTextStyle.copyWith(
-                  fontSize: 20,
+                  fontSize: 22,
                   fontWeight: semiBold,
                 ),
               ),
@@ -122,7 +122,7 @@ class ProfilePage extends StatelessWidget {
                 ],
               ),
               SizedBox(
-                height: 20,
+                height: 25,
               ),
               NameItem(text1: 'Email'),
               MenuItem(
@@ -175,7 +175,7 @@ class NameItem extends StatelessWidget {
         Text(
           text1,
           style: blackTextStyle.copyWith(
-            fontSize: 11,
+            fontSize: 12,
           ),
         )
       ],

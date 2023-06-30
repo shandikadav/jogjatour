@@ -22,11 +22,11 @@ class LoginPages extends StatelessWidget {
               Center(
                 child: Image.asset(
                   'assets/logo_jtour_blue.png',
-                  width: 250,
+                  width: 220,
                   height: 111,
                 ),
               ),
-              SizedBox(height: 40),
+              SizedBox(height: 80),
               TextField(
                 decoration: InputDecoration(
                   filled: true,
@@ -37,9 +37,12 @@ class LoginPages extends StatelessWidget {
                   border: InputBorder.none,
                   
                 ),
+                style: TextStyle(
+                  fontSize: 14
+                ),
               ),
               SizedBox(
-                height: 20,
+                height: 10,
               ),
               TextField(
                 decoration: InputDecoration(
@@ -51,6 +54,9 @@ class LoginPages extends StatelessWidget {
                   border: InputBorder.none,
                   
                   suffixIcon: Icon(Icons.remove_red_eye),
+                ),
+                style: TextStyle(
+                  fontSize: 14
                 ),
                 obscureText: true,
               ),
@@ -65,7 +71,7 @@ class LoginPages extends StatelessWidget {
                       'Lupa Password?',
                       textAlign: TextAlign.center,
                       style: blackTextStyle.copyWith(
-                        fontSize: 14,
+                        fontSize: 12,
                       ),
                     ),
                   ),
@@ -82,21 +88,26 @@ class LoginPages extends StatelessWidget {
                       MaterialPageRoute(builder: (context) => MainPages()),
                     );
                   },
-                  child: Text('Login Sekarang'),
+                  child: Text('Login Sekarang',
+                  style: TextStyle(
+                    fontSize: 13
+                  ),),
                   style: ElevatedButton.styleFrom(
                       primary: Color.fromARGB(255, 8, 130, 149),
-                      minimumSize: Size(335, 52)),
+                      minimumSize: Size(335, 45)),
                 ),
               ),
               SizedBox(
-                height: 20,
+                height: 15,
               ),
               Center(
                 child: TextButton(
                   onPressed: () {},
                   child: Text(
                     'Buat Akun',
-                    style: blackTextStyle.copyWith(),
+                    style: blackTextStyle.copyWith(
+                      fontSize: 13
+                    ),
                   ),
                 ),
               )

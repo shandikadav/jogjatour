@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:jogjatour/pages/favorite.dart';
 import 'package:jogjatour/pages/homepages.dart';
 import 'package:jogjatour/pages/login_pages.dart';
 import 'package:jogjatour/pages/main_pages.dart';
 import 'package:jogjatour/pages/on_board.dart';
+import 'package:jogjatour/pages/profile.dart';
+import 'package:jogjatour/pages/searchpage.dart';
 import 'package:jogjatour/pages/splash_page.dart';
 
 void main() {
@@ -22,6 +25,9 @@ class MyApp extends StatelessWidget {
         '/login' :(context) => LoginPages(),
         '/mainpage' :(context) => MainPages(),
         '/homepage' :(context) => HomePages(),
+        '/search' :(context) => Searchpage(),
+        '/favorite' :(context) => FavoritePage(),
+        '/profile' :(context) => ProfilePage(),
       },
     );
   }

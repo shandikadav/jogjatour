@@ -6,7 +6,20 @@ class FavoritePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(child: Text("Ini adalah favorite pages")),
+      backgroundColor: Color.fromARGB(245, 248, 255, 255),
+      appBar: AppBar(title: Text("Favorite",
+      style: TextStyle(
+        fontSize: 18
+      ),
+      ),
+      automaticallyImplyLeading: false,
+      backgroundColor: Color.fromARGB(255, 8, 130, 149),
+      ),
+      body: Center(child: Text("Belum ada wisata favorit yang ditambahkan",
+      style: TextStyle(
+        fontWeight: FontWeight.w300,
+        fontSize: 13
+      ),)),
     );
   }
 }

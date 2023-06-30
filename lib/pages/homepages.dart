@@ -3,13 +3,13 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:jogjatour/homepage_content.dart';
 import 'package:jogjatour/pages/favorite.dart';
 
+import 'category_pages.dart';
 import 'notif_page.dart';
 
 
 class HomePages extends StatelessWidget {
   const HomePages({super.key});
-  
-  
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -90,6 +90,8 @@ class HomePages extends StatelessWidget {
                 viewportFraction: 0.6,
                 height: 170,
                 autoPlay: true,
+                autoPlayInterval: Duration(seconds: 3),
+                enlargeFactor: 0.3,
               ),
               items: contents
             .map((item) => Stack(
@@ -99,8 +101,8 @@ class HomePages extends StatelessWidget {
                     borderRadius: BorderRadius.circular(8.0),
                         child:
                             Image.network(item.img, 
-                            fit: BoxFit.cover, 
-                            width: double.infinity, 
+                            fit: BoxFit.cover,
+                            width: 400, 
                             height: 170,
                             ),
                   ),
@@ -157,65 +159,89 @@ class HomePages extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Column(
-                    children: [
-                      Container(
-                        height: 30,
-                        width: 30,
-                        color: Color.fromARGB(255, 252, 153, 145),
-                        child: Image.asset('assets/makanan.png',
-                        height: 15,
-                        width: 15,
+                  InkWell(
+                    child: Column(
+                      children: [
+                        Container(
+                          height: 30,
+                          width: 30,
+                          color: Color.fromARGB(255, 252, 153, 145),
+                          child: Image.asset('assets/makanan.png',
+                          height: 15,
+                          width: 15,
+                          ),
                         ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 8.0),
-                        child: Text("Wisata Kuliner",
-                        style: TextStyle(
-                          fontSize: 11
-                        ),),
-                      )
-                    ],
+                        Padding(
+                          padding: const EdgeInsets.only(top: 8.0),
+                          child: Text("Wisata Kuliner",
+                          style: TextStyle(
+                            fontSize: 11
+                          ),),
+                        )
+                      ],
+                    ),
+                    onTap: () {
+                          Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => CategoryPage()),
+                        );
+                        },
                   ),
-                  Column(
-                    children: [
-                      Container(
-                        height: 30,
-                        width: 30,
-                        color: Color.fromARGB(255, 147, 193, 117),
-                        child: Image.asset('assets/alam.png',
-                        height: 15,
-                        width: 15,
+                  InkWell(
+                    child: Column(
+                      children: [
+                        Container(
+                          height: 30,
+                          width: 30,
+                          color: Color.fromARGB(255, 147, 193, 117),
+                          child: Image.asset('assets/alam.png',
+                          height: 15,
+                          width: 15,
+                          ),
                         ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 8.0),
-                        child: Text("Wisata Alam",
-                        style: TextStyle(
-                          fontSize: 11
-                        ),),
-                      )
-                    ],
+                        Padding(
+                          padding: const EdgeInsets.only(top: 8.0),
+                          child: Text("Wisata Alam",
+                          style: TextStyle(
+                            fontSize: 11
+                          ),),
+                        )
+                      ],
+                    ),
+                    onTap: () {
+                          Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => CategoryPage()),
+                        );
+                        },
                   ),
-                  Column(
-                    children: [
-                      Container(
-                        height: 30,
-                        width: 30,
-                        color: Color.fromARGB(255, 126, 142, 248),
-                        child: Image.asset('assets/sejarah.png',
-                        height: 15,
-                        width: 15,
+                  InkWell(
+                    child: Column(
+                      children: [
+                        Container(
+                          height: 30,
+                          width: 30,
+                          color: Color.fromARGB(255, 126, 142, 248),
+                          child: Image.asset('assets/sejarah.png',
+                          height: 15,
+                          width: 15,
+                          ),
                         ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 8.0),
-                        child: Text("Wisata Budaya",
-                        style: TextStyle(
-                          fontSize: 11
-                        ),),
-                      )
-                    ],
+                        Padding(
+                          padding: const EdgeInsets.only(top: 8.0),
+                          child: Text("Wisata Budaya",
+                          style: TextStyle(
+                            fontSize: 11
+                          ),),
+                        )
+                      ],
+                    ),
+                    onTap: () {
+                          Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => CategoryPage()),
+                        );
+                        },
                   ),
                 ],
               ),
@@ -223,65 +249,89 @@ class HomePages extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Column(
-                    children: [
-                      Container(
-                        height: 30,
-                        width: 30,
-                        color: Color.fromARGB(255, 251, 186, 184),
-                        child: Image.asset('assets/Mosque.png',
-                        height: 15,
-                        width: 15,
+                  InkWell(
+                    child: Column(
+                      children: [
+                        Container(
+                          height: 30,
+                          width: 30,
+                          color: Color.fromARGB(255, 251, 186, 184),
+                          child: Image.asset('assets/Mosque.png',
+                          height: 15,
+                          width: 15,
+                          ),
                         ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 8.0),
-                        child: Text("Wisata Religi",
-                        style: TextStyle(
-                          fontSize: 11
-                        ),),
-                      )
-                    ],
+                        Padding(
+                          padding: const EdgeInsets.only(top: 8.0),
+                          child: Text("Wisata Religi",
+                          style: TextStyle(
+                            fontSize: 11
+                          ),),
+                        )
+                      ],
+                    ),
+                    onTap: () {
+                          Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => CategoryPage()),
+                        );
+                        },
                   ),
-                  Column(
-                    children: [
-                      Container(
-                        height: 30,
-                        width: 30,
-                        color: Color.fromARGB(255, 167, 147, 244),
-                        child: Image.asset('assets/topi.png',
-                        height: 15,
-                        width: 15,
+                  InkWell(
+                    child: Column(
+                      children: [
+                        Container(
+                          height: 30,
+                          width: 30,
+                          color: Color.fromARGB(255, 167, 147, 244),
+                          child: Image.asset('assets/topi.png',
+                          height: 15,
+                          width: 15,
+                          ),
                         ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 8.0),
-                        child: Text("Wisata Cerdas",
-                        style: TextStyle(
-                          fontSize: 11
-                        ),),
-                      )
-                    ],
+                        Padding(
+                          padding: const EdgeInsets.only(top: 8.0),
+                          child: Text("Wisata Cerdas",
+                          style: TextStyle(
+                            fontSize: 11
+                          ),),
+                        )
+                      ],
+                    ),
+                    onTap: () {
+                          Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => CategoryPage()),
+                        );
+                        },
                   ),
-                  Column(
-                    children: [
-                      Container(
-                        height: 30,
-                        width: 30,
-                        color: Color.fromARGB(255, 255, 231, 161),
-                        child: Image.asset('assets/farm.png',
-                        height: 15,
-                        width: 15,
+                  InkWell(
+                    child: Column(
+                      children: [
+                        Container(
+                          height: 30,
+                          width: 30,
+                          color: Color.fromARGB(255, 255, 231, 161),
+                          child: Image.asset('assets/farm.png',
+                          height: 15,
+                          width: 15,
+                          ),
                         ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 8.0),
-                        child: Text("Wisata Pertani",
-                        style: TextStyle(
-                          fontSize: 11
-                        ),),
-                      ),
-                    ],
+                        Padding(
+                          padding: const EdgeInsets.only(top: 8.0),
+                          child: Text("Wisata Pertani",
+                          style: TextStyle(
+                            fontSize: 11
+                          ),),
+                        ),
+                      ],
+                    ),
+                    onTap: () {
+                          Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => CategoryPage()),
+                        );
+                        },
                   ),
                 ],
               )
