@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:jogjatour/pages/login_pages.dart';
-
 import '../contents_onboarding.dart';
 
 class OnBoardingPages extends StatefulWidget {

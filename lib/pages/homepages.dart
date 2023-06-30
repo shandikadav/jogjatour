@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:jogjatour/homepage_content.dart';
-import 'package:jogjatour/pages/favorite.dart';
-
 import 'category_pages.dart';
+import 'main_tour.dart';
 import 'notif_page.dart';
+
+String dataHihihiha = '';
 
 
 class HomePages extends StatelessWidget {
@@ -107,9 +108,10 @@ class HomePages extends StatelessWidget {
                             ),
                   ),
                   onTap: () {
+                    dataHihihiha = item.title;
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => FavoritePage()),
+                      MaterialPageRoute(builder: (context) => MainTour(data: dataHihihiha)),
                     );
                   },
                 ),
