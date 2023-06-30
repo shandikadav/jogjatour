@@ -23,7 +23,7 @@ class ProfilePage extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: 20,
+                height: 16,
               ),
               Row(
                 children: [
@@ -62,7 +62,7 @@ class ProfilePage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   SizedBox(
-                    width: 120,
+                    width: 105,
                     height: 35,
                     child: ElevatedButton(
                       onPressed: () {
@@ -88,7 +88,7 @@ class ProfilePage extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    width: 120,
+                    width: 105,
                     height: 35,
                     child: ElevatedButton(
                       onPressed: () {
@@ -122,7 +122,7 @@ class ProfilePage extends StatelessWidget {
                 ],
               ),
               SizedBox(
-                height: 25,
+                height: 20,
               ),
               NameItem(text1: 'Email'),
               MenuItem(
