@@ -24,13 +24,13 @@ Widget validateData(String input) {
     } else {
       HomepageContents selectedContent = filteredContents.first;
       return Scaffold(
-        backgroundColor: Color.fromARGB(245, 10, 77, 104),
+        backgroundColor: Color.fromARGB(255, 10, 77, 104),
         body: Column(
           children: [
             Stack(
               children: [
                 ClipRRect(
-                  child: Image.network(
+                  child: Image.asset(
                     selectedContent.img,
                     width: double.infinity,
                     height: 245,
