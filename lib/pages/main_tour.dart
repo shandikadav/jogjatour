@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:jogjatour/pages/category_pages.dart';
 import 'package:jogjatour/pages/homepages.dart';
 import 'package:jogjatour/homepage_content.dart';
 import 'searchpage.dart';
 
 Widget validateData(String input) {
-  if (input != dataHihihiha && input != dataTitle) {
+  if (input != dataHihihiha && input != dataTitle && input != dataTitles) {
     return Scaffold(
       body: Center(child: Text("Data tidak ada!")),
     );

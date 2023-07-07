@@ -6,6 +6,7 @@ import 'main_tour.dart';
 import 'notif_page.dart';
 
 String dataHihihiha = '';
+String dataCat = '';
 
 
 class HomePages extends StatelessWidget {
@@ -185,7 +186,7 @@ class HomePages extends StatelessWidget {
                     onTap: () {
                           Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => CategoryPage()),
+                          MaterialPageRoute(builder: (context) => CategoryPage(dataCat: "Wisata Kuliner",)),
                         );
                         },
                   ),
@@ -213,7 +214,7 @@ class HomePages extends StatelessWidget {
                     onTap: () {
                           Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => CategoryPage()),
+                          MaterialPageRoute(builder: (context) => CategoryPage(dataCat: "Wisata Alam")),
                         );
                         },
                   ),
@@ -241,7 +242,7 @@ class HomePages extends StatelessWidget {
                     onTap: () {
                           Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => CategoryPage()),
+                          MaterialPageRoute(builder: (context) => CategoryPage(dataCat: "Wisata Budaya",)),
                         );
                         },
                   ),
@@ -275,7 +276,7 @@ class HomePages extends StatelessWidget {
                     onTap: () {
                           Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => CategoryPage()),
+                          MaterialPageRoute(builder: (context) => CategoryPage(dataCat: "Wisata Religi",)),
                         );
                         },
                   ),
@@ -303,7 +304,7 @@ class HomePages extends StatelessWidget {
                     onTap: () {
                           Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => CategoryPage()),
+                          MaterialPageRoute(builder: (context) => CategoryPage(dataCat: "Wisata Cerdas",)),
                         );
                         },
                   ),
@@ -331,7 +332,7 @@ class HomePages extends StatelessWidget {
                     onTap: () {
                           Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => CategoryPage()),
+                          MaterialPageRoute(builder: (context) => CategoryPage(dataCat: "Wisata Pertani",)),
                         );
                         },
                   ),
