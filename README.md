@@ -1,17 +1,16 @@
+
+![Logo](https://i.ibb.co/W5vTvvf/logo-jtour-blue.png)
+
+
 # jogjatour
 
-A new Flutter project.
+Jogja tour merupakan aplikasi yang dibuat untuk menyelesaikan final project AMCC divisi mobile development.
 
-## Getting Started
+jogjatour sendiri dibuat oleh Team Hudaw AMCC yang di isi oleh saya sendiri Shandika David, Guido Augusta, dan Nur Rizki.
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Authors
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-# jogjatour
+- [@shandikadav](https://www.github.com/shandikadav)
+
