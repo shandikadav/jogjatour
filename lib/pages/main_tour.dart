@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:jogjatour/pages/homepages.dart';
 import 'package:jogjatour/homepage_content.dart';
+import 'searchpage.dart';
 
 Widget validateData(String input) {
-  if (input != dataHihihiha) {
+  if (input != dataHihihiha && input != dataTitle) {
     return Scaffold(
       body: Center(child: Text("Data tidak ada!")),
     );
@@ -58,28 +59,51 @@ Widget validateData(String input) {
                               Text(
                                 selectedContent.title,
                                 style: TextStyle(
-                                    fontSize: 20, fontWeight: FontWeight.w700,
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.w700,
                                     color: Color.fromARGB(245, 245, 248, 255)),
                               ),
-                              Icon(Icons.favorite_border, color: Color.fromARGB(100, 245, 248, 255),)
+                              Icon(
+                                Icons.favorite_border,
+                                color: Color.fromARGB(100, 245, 248, 255),
+                              )
                             ],
                           ),
-                          SizedBox(height: 5,),
-                          Text(selectedContent.addr,
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            fontSize: 9,
-                            fontWeight: FontWeight.w300,
-                            color: Color.fromARGB(245, 245, 248, 255)
-                          ),),
-                          SizedBox(height: 30,),
+                          SizedBox(
+                            height: 5,
+                          ),
+                          Text(
+                            selectedContent.addr,
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                                fontSize: 9,
+                                fontWeight: FontWeight.w300,
+                                color: Color.fromARGB(245, 245, 248, 255)),
+                          ),
+                          SizedBox(
+                            height: 30,
+                          ),
                           Row(
                             children: [
-                              Text("Deskripsi Wisata", style: TextStyle(fontWeight: FontWeight.w700, color: Color.fromARGB(245, 245, 248, 255)),),
+                              Text(
+                                "Deskripsi Wisata",
+                                style: TextStyle(
+                                    fontWeight: FontWeight.w700,
+                                    color: Color.fromARGB(245, 245, 248, 255)),
+                              ),
                             ],
                           ),
-                          SizedBox(height: 15,),
-                          Text(selectedContent.desc, textAlign: TextAlign.justify,style: TextStyle(fontWeight: FontWeight.w300, fontSize: 13, color: Color.fromARGB(245, 245, 248, 255)),)
+                          SizedBox(
+                            height: 15,
+                          ),
+                          Text(
+                            selectedContent.desc,
+                            textAlign: TextAlign.justify,
+                            style: TextStyle(
+                                fontWeight: FontWeight.w300,
+                                fontSize: 13,
+                                color: Color.fromARGB(245, 245, 248, 255)),
+                          )
                         ],
                       ),
                     ),
@@ -101,6 +125,6 @@ class MainTour extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return validateData(dataHihihiha);
+    return validateData(data);
   }
 }
