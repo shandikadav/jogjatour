@@ -1,5 +1,7 @@
 import 'package:flutter/services.dart';
+import 'package:jogjatour/pages/forgotpass_page.dart';
 import 'package:jogjatour/pages/main_pages.dart';
+import 'package:jogjatour/pages/register_page.dart';
 import 'package:jogjatour/theme.dart';
 import 'package:flutter/material.dart';
 
@@ -125,7 +127,12 @@ class LoginPages extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       TextButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => ForgotPassPage()),
+                      );
+                        },
                         child: Text(
                           'Lupa Password?',
                           textAlign: TextAlign.center,
@@ -263,7 +270,12 @@ class LoginPages extends StatelessWidget {
                       style: TextStyle(fontSize: 14),
                     ),
                     TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => RegisterPage()),
+                      );
+                      },
                       child: Text(
                         'Buat Akun',
                         textAlign: TextAlign.center,
