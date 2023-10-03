@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:jogjatour/pages/favorite.dart';
 import 'package:jogjatour/pages/homepages.dart';
 import 'package:jogjatour/pages/login_pages.dart';
@@ -9,6 +10,10 @@ import 'package:jogjatour/pages/searchpage.dart';
 import 'package:jogjatour/pages/splash_page.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp
+  ]);
   runApp(const MyApp());
 }
 
