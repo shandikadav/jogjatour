@@ -67,7 +67,7 @@ class ProfilePage extends StatelessWidget {
                     Text(
                       "Data Profil",
                       style:
-                          TextStyle(fontSize: 16, fontWeight: FontWeight.w400),
+                          TextStyle(fontSize: 14, fontWeight: FontWeight.w400),
                     ),
                   ],
                 ),
@@ -88,7 +88,7 @@ class ProfilePage extends StatelessWidget {
                     Text(
                       "Favorit",
                       style:
-                          TextStyle(fontSize: 16, fontWeight: FontWeight.w400),
+                          TextStyle(fontSize: 14, fontWeight: FontWeight.w400),
                     ),
                   ],
                 ),
@@ -117,7 +117,7 @@ class ProfilePage extends StatelessWidget {
                     Text(
                       "Atur Profil",
                       style:
-                          TextStyle(fontSize: 16, fontWeight: FontWeight.w400),
+                          TextStyle(fontSize: 14, fontWeight: FontWeight.w400),
                     ),
                   ],
                 ),
@@ -138,7 +138,7 @@ class ProfilePage extends StatelessWidget {
                     Text(
                       "Ganti Password",
                       style:
-                          TextStyle(fontSize: 16, fontWeight: FontWeight.w400),
+                          TextStyle(fontSize: 14, fontWeight: FontWeight.w400),
                     ),
                   ],
                 ),
@@ -159,7 +159,7 @@ class ProfilePage extends StatelessWidget {
                     Text(
                       "Ganti Bahasa",
                       style:
-                          TextStyle(fontSize: 16, fontWeight: FontWeight.w400),
+                          TextStyle(fontSize: 14, fontWeight: FontWeight.w400),
                     ),
                   ],
                 ),
