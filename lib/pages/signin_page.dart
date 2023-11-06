@@ -10,6 +10,7 @@ class SignInPages extends StatelessWidget {
     return AnnotatedRegion<SystemUiOverlayStyle>(
       value: SystemUiOverlayStyle.dark,
       child: Scaffold(
+        backgroundColor: Color.fromRGBO(248, 248, 248, 1),
         body: SafeArea(
             child: Padding(
           padding: const EdgeInsets.only(left: 20, right: 20),
