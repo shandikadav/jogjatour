@@ -1,11 +1,13 @@
 import 'package:flutter/services.dart';
 import 'package:jogjatour/pages/forgotpass_page.dart';
+import 'package:jogjatour/pages/login_pages.dart';
 import 'package:jogjatour/pages/main_pages.dart';
 import 'package:jogjatour/pages/signup_page.dart';
+import 'package:jogjatour/theme.dart';
 import 'package:flutter/material.dart';
 
-class LoginPages extends StatelessWidget {
-  const LoginPages({super.key});
+class RegisterPage extends StatelessWidget {
+  const RegisterPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -21,22 +23,42 @@ class LoginPages extends StatelessWidget {
                 child: ListView(
                   children: [
                     SizedBox(
-                      height: 80,
+                      height: 40,
                     ),
                     Text(
-                      "Selamat Datang!",
+                      "Buat Akun",
                       style: TextStyle(fontSize: 32),
                     ),
                     SizedBox(
                       height: 6,
                     ),
-                    Text("Masuk untuk lanjut kedalam aplikasi",
+                    Text("Buat akun untuk menggunakan aplikasi",
                         style: TextStyle(
                           fontSize: 14,
                           color: Color.fromRGBO(0, 0, 0, 0.4),
                         )),
                     SizedBox(
                       height: 60,
+                    ),
+                    Text("Nama Lengkap",
+                        style: TextStyle(
+                          fontSize: 16,
+                          color: Color.fromRGBO(0, 0, 0, 0.6),
+                        )),
+                    SizedBox(
+                      height: 6,
+                    ),
+                    SizedBox(
+                      height: 38,
+                      child: TextField(
+                        decoration: InputDecoration(
+                            contentPadding: EdgeInsets.all(10),
+                            border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(25.0))),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 30,
                     ),
                     Text("Username",
                         style: TextStyle(
@@ -78,6 +100,28 @@ class LoginPages extends StatelessWidget {
                       ),
                     ),
                     SizedBox(
+                      height: 30,
+                    ),
+                    Text("Konfirmasi Password",
+                        style: TextStyle(
+                          fontSize: 16,
+                          color: Color.fromRGBO(0, 0, 0, 0.6),
+                        )),
+                    SizedBox(
+                      height: 6,
+                    ),
+                    SizedBox(
+                      height: 38,
+                      child: TextField(
+                        decoration: InputDecoration(
+                            contentPadding: EdgeInsets.all(10),
+                            suffixIcon: Icon(Icons.remove_red_eye),
+                            border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(25.0))),
+                        obscureText: true,
+                      ),
+                    ),
+                    SizedBox(
                       height: 70,
                     ),
                     Padding(
@@ -90,7 +134,7 @@ class LoginPages extends StatelessWidget {
                                   builder: ((context) => const MainPages())));
                         },
                         child: Text(
-                          "Login",
+                          "Daftar",
                           style: TextStyle(
                               fontWeight: FontWeight.w700, fontSize: 18),
                         ),
@@ -104,24 +148,6 @@ class LoginPages extends StatelessWidget {
                     SizedBox(
                       height: 16,
                     ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 80),
-                      child: TextButton(
-                        onPressed: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) =>
-                                      const ForgotPassPage()));
-                        },
-                        child: Text("Lupa Password?",
-                            style: TextStyle(
-                              fontWeight: FontWeight.w400,
-                              fontSize: 18,
-                              color: Color.fromRGBO(0, 0, 0, 0.6),
-                            )),
-                      ),
-                    ),
                   ],
                 ),
               ),
@@ -130,7 +156,7 @@ class LoginPages extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text("Belum punya akun?",
+                    Text("Sudah punya akun?",
                         style: TextStyle(
                           fontSize: 16,
                           color: Colors.black,
@@ -140,9 +166,9 @@ class LoginPages extends StatelessWidget {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const RegisterPage()));
+                                builder: (context) => const LoginPages()));
                       },
-                      child: Text("Buat akun",
+                      child: Text("Masuk",
                           style: TextStyle(
                             fontSize: 16,
                             color: Color.fromRGBO(5, 191, 219, 1),

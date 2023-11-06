@@ -1,7 +1,7 @@
 import 'package:flutter/services.dart';
 import 'package:jogjatour/pages/forgotpass_page.dart';
 import 'package:jogjatour/pages/main_pages.dart';
-import 'package:jogjatour/pages/register_page.dart';
+import 'package:jogjatour/pages/signup_page.dart';
 import 'package:jogjatour/theme.dart';
 import 'package:flutter/material.dart';
 
@@ -10,13 +10,10 @@ class LoginPages extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     SystemChrome.setSystemUIOverlayStyle(
-       SystemUiOverlayStyle(
-         statusBarColor: Colors.transparent
-         //color set to transperent or set your own color
-      )
-  );
+        SystemUiOverlayStyle(statusBarColor: Colors.transparent
+            //color set to transperent or set your own color
+            ));
 
     return Scaffold(
       body: Column(
@@ -129,9 +126,10 @@ class LoginPages extends StatelessWidget {
                       TextButton(
                         onPressed: () {
                           Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => ForgotPassPage()),
-                      );
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => ForgotPassPage()),
+                          );
                         },
                         child: Text(
                           'Lupa Password?',
@@ -272,9 +270,10 @@ class LoginPages extends StatelessWidget {
                     TextButton(
                       onPressed: () {
                         Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => RegisterPage()),
-                      );
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => RegisterPage()),
+                        );
                       },
                       child: Text(
                         'Buat Akun',
