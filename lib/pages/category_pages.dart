@@ -12,10 +12,9 @@ Widget validateData(String input) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Color.fromARGB(255, 8, 130, 149),
-        title: Text(input,
-        style: TextStyle(
-          fontSize: 17
-        ),
+        title: Text(
+          input,
+          style: TextStyle(fontSize: 17),
         ),
       ),
       body: Center(child: Text("Data tidak ada!")),
@@ -24,42 +23,41 @@ Widget validateData(String input) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Color.fromARGB(255, 8, 130, 149),
-        title: Text(input,
-        style: TextStyle(
-          fontSize: 17
-        ),
+        title: Text(
+          input,
+          style: TextStyle(fontSize: 17),
         ),
       ),
       body: ListView.builder(
         itemCount: filteredContents.length,
         itemBuilder: (context, index) => ListTile(
-                  onTap: () {
-                    dataTitles = filteredContents[index].title;
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) =>
-                            MainTour(data: dataTitles),
-                      ),
-                    );
-                  },
-                  contentPadding: EdgeInsets.all(25),
-                  title: Text(
-                    filteredContents[index].title,
-                    style: TextStyle(
-                      fontSize: 12,
-                    ),
-                  ),
-                  leading: ClipRRect(
-                    borderRadius: BorderRadius.circular(10),
-                    child: Image.asset(
-                      filteredContents[index].img,
-                      fit: BoxFit.cover,
-                      width: 70,
-                      height: 50,
-                    ),
-                  ),
-                ),
+          onTap: () {
+            // dataTitles = filteredContents[index].title;
+            // Navigator.push(
+            //   context,
+            //   MaterialPageRoute(
+            //     builder: (context) =>
+            //         MainTour(data: dataTitles),
+            //   ),
+            // );
+          },
+          contentPadding: EdgeInsets.all(25),
+          title: Text(
+            filteredContents[index].title,
+            style: TextStyle(
+              fontSize: 12,
+            ),
+          ),
+          leading: ClipRRect(
+            borderRadius: BorderRadius.circular(10),
+            child: Image.asset(
+              filteredContents[index].img,
+              fit: BoxFit.cover,
+              width: 70,
+              height: 50,
+            ),
+          ),
+        ),
       ),
     );
   }

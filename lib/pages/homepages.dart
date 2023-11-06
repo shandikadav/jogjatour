@@ -1,345 +1,253 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:flutter_launcher_icons/xml_templates.dart';
 import 'package:jogjatour/homepage_content.dart';
 import 'category_pages.dart';
 import 'main_tour.dart';
 import 'notif_page.dart';
-
-String dataHihihiha = '';
-String dataCat = '';
-
 
 class HomePages extends StatelessWidget {
   const HomePages({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        backgroundColor: Color.fromARGB(245, 248, 255, 255),
-        body: Padding(
-          padding: EdgeInsets.all(20),
-          child: ListView(
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+    return Scaffold(
+      body: SafeArea(
+        child: ListView(
+          children: [
+            Padding(
+              padding: const EdgeInsets.fromLTRB(22, 27, 22, 0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Image.asset(
-                    'assets/logo_jtour_black.png',
-                    height: 20,
-                    width: 80,
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Row(
+                        children: [
+                          Image.asset('assets/profile.png'),
+                          SizedBox(
+                            width: 10,
+                          ),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text('Selamat Datang',
+                                  style: TextStyle(
+                                      fontSize: 12,
+                                      fontWeight: FontWeight.w300)),
+                              Text(
+                                'Guido Augusta',
+                                style: TextStyle(
+                                    fontSize: 18, fontWeight: FontWeight.w700),
+                              ),
+                            ],
+                          )
+                        ],
+                      ),
+                      IconButton(
+                        onPressed: () {},
+                        icon: Icon(Icons.notifications_none_outlined),
+                        iconSize: 30,
+                      )
+                    ],
                   ),
                   SizedBox(
-                    width: 120,
+                    height: 32,
                   ),
-                  IconButton(
-                    icon: Image.asset(
-                      'assets/notif.png',
-                      height: 30,
-                      width: 30,
-                    ), onPressed: () { 
-                      Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => NotificationPage()),
-                    );
-                     },
+                  SizedBox(
+                    height: 40,
+                    child: TextField(
+                      decoration: InputDecoration(
+                        filled: true,
+                        fillColor: Color(0xFFF5F8FF),
+                        enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(12),
+                          borderSide:
+                              BorderSide(width: 1, color: Color(0xFF05BFDB)),
+                        ),
+                        hintText: 'Cari wisata disini',
+                        hintStyle:
+                            TextStyle(height: 0.7, fontWeight: FontWeight.w100),
+                        prefixIcon: Icon(Icons.search),
+                      ),
+                    ),
                   ),
-                  Image.asset(
-                    'assets/profile.png',
-                    height: 50,
-                    width: 50,
+                  SizedBox(
+                    height: 17,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      ElevatedButton(
+                        onPressed: () {},
+                        child: Text(
+                          'Semua',
+                          style: TextStyle(fontSize: 12),
+                        ),
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Color(0xFF05BFDB),
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(8)),
+                        ),
+                      ),
+                      TextButton(
+                        onPressed: () {},
+                        child: Text(
+                          'Populer',
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 12,
+                          ),
+                        ),
+                      ),
+                      TextButton(
+                        onPressed: () {},
+                        child: Text(
+                          'Rekomendasi',
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 12,
+                          ),
+                        ),
+                      ),
+                      TextButton(
+                        onPressed: () {},
+                        child: Text(
+                          'Paling dilihat',
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 12,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 10, bottom: 8),
+                    child: CarouselSlider(
+                      items: [
+                        Container(
+                          width: 185,
+                          height: 230,
+                          child: Card(
+                            color: Colors.white,
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Image.asset('assets/jalan_malioboro.png'),
+                                  SizedBox(
+                                    height: 6,
+                                  ),
+                                  Text('Jalan Malioboro'),
+                                  SizedBox(
+                                    height: 7,
+                                  ),
+                                  Row(
+                                    children: [
+                                      Icon(
+                                        Icons.location_on,
+                                        color: Color(0xFF05BFDB),
+                                        size: 20,
+                                      ),
+                                      Expanded(
+                                        child: Text(
+                                          'Sosromenduran, Gedong Tengen, Kota Yogyakarta, Daerah Istimewa Yogyakarta',
+                                          maxLines: 2,
+                                          overflow: TextOverflow.ellipsis,
+                                          style: TextStyle(
+                                            fontSize: 8,
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  )
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
+                        Container(
+                          width: 185,
+                          height: 230,
+                          child: Card(
+                            color: Colors.white,
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Image.asset('assets/jalan_malioboro.png'),
+                                  SizedBox(
+                                    height: 6,
+                                  ),
+                                  Text('Umbul Saren'),
+                                  SizedBox(
+                                    height: 7,
+                                  ),
+                                  Row(
+                                    children: [
+                                      Icon(
+                                        Icons.location_on,
+                                        color: Color(0xFF05BFDB),
+                                        size: 20,
+                                      ),
+                                      Expanded(
+                                        child: Text(
+                                          'Wedomartani, Sleman, Kabupaten Sleman, Daerah Istimewa Yogyakarta',
+                                          maxLines: 2,
+                                          overflow: TextOverflow.ellipsis,
+                                          style: TextStyle(
+                                            fontSize: 8,
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  )
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                      options: CarouselOptions(
+                        height: 230,
+                        autoPlay: true,
+                        autoPlayInterval: Duration(seconds: 5),
+                        viewportFraction: 0.57,
+                        enlargeCenterPage: false,
+                        // aspectRatio: 15 / 5,
+                        enableInfiniteScroll: true,
+                        padEnds: false,
+                      ),
+                    ),
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        'Destinasi Terdekat',
+                        style: TextStyle(
+                            fontSize: 16, fontWeight: FontWeight.w500),
+                      ),
+                      TextButton(
+                        onPressed: () {},
+                        child: Text(
+                          'Lihat Semua',
+                          style: TextStyle(
+                              color: Color.fromARGB(130, 0, 0, 0),
+                              fontSize: 12,
+                              fontWeight: FontWeight.w400),
+                        ),
+                      )
+                    ],
                   )
                 ],
               ),
-              SizedBox(height: 18,),
-              TextField(
-                decoration: InputDecoration(
-                  filled: true,
-                  fillColor: Color.fromARGB(255, 246, 246, 246),
-                  labelText: 'Cari wisata disini',
-                  labelStyle: TextStyle(color: Color.fromARGB(255, 169, 169, 169)),
-                  border: InputBorder.none,
-                  prefixIcon: Icon(Icons.search),
-                ),
-                style: TextStyle(
-                  fontSize: 11
-                ),
-              ),
-              
-              SizedBox(height: 2,),
-              Row(
-                children: [
-                  Container(
-                    child: TextButton(
-                          onPressed: () {},
-                          child: Text(
-                            'Rekomendasi Terpopuler',
-                            textAlign: TextAlign.start,
-                            style: TextStyle(
-                              fontWeight: FontWeight.w400,
-                              color: Colors.black,
-                              fontSize: 16,
-                            )
-                          ),
-                        ),
-                  ),
-                ],
-              ),
-              SizedBox(height: 4,),
-              CarouselSlider(options: CarouselOptions(
-                aspectRatio: 2.0,
-                enlargeCenterPage: true,
-                viewportFraction: 0.6,
-                height: 170,
-                autoPlay: true,
-                autoPlayInterval: Duration(seconds: 3),
-                enlargeFactor: 0.3,
-              ),
-              items: contents
-            .map((item) => Stack(
-              children: [
-                InkWell(
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(8.0),
-                        child:
-                            Image.asset(item.img, 
-                            fit: BoxFit.cover,
-                            width: 400, 
-                            height: 170,
-                            ),
-                  ),
-                  onTap: () {
-                    dataHihihiha = item.title;
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => MainTour(data: dataHihihiha)),
-                    );
-                  },
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 135),
-                  child: Container(
-                    height: 35,
-                    color: Color.fromARGB(150, 0, 0, 0),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(top:145, left: 10),
-                  child: Text(
-                    item.title,
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 14,
-                    ),),
-                )
-              ],
-            )
-                )
-            .toList(),
-              ),
-              SizedBox(height: 2,),
-              Row(
-                children: [
-                  Container(
-                    child: TextButton(
-                          onPressed: () {},
-                          child: Text(
-                            'Kategori',
-                            textAlign: TextAlign.start,
-                            style: TextStyle(
-                              fontWeight: FontWeight.w400,
-                              color: Colors.black,
-                              fontSize: 16,
-                            )
-                          ),
-                        ),
-                  ),
-                ],
-              ),
-              SizedBox(height: 5,),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  InkWell(
-                    child: Column(
-                      children: [
-                        Container(
-                          height: 30,
-                          width: 30,
-                          color: Color.fromARGB(255, 252, 153, 145),
-                          child: Image.asset('assets/makanan.png',
-                          height: 15,
-                          width: 15,
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(top: 8.0),
-                          child: Text("Wisata Kuliner",
-                          style: TextStyle(
-                            fontSize: 11
-                          ),),
-                        )
-                      ],
-                    ),
-                    onTap: () {
-                          Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => CategoryPage(dataCat: "Wisata Kuliner",)),
-                        );
-                        },
-                  ),
-                  InkWell(
-                    child: Column(
-                      children: [
-                        Container(
-                          height: 30,
-                          width: 30,
-                          color: Color.fromARGB(255, 147, 193, 117),
-                          child: Image.asset('assets/alam.png',
-                          height: 15,
-                          width: 15,
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(top: 8.0),
-                          child: Text("Wisata Alam",
-                          style: TextStyle(
-                            fontSize: 11
-                          ),),
-                        )
-                      ],
-                    ),
-                    onTap: () {
-                          Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => CategoryPage(dataCat: "Wisata Alam")),
-                        );
-                        },
-                  ),
-                  InkWell(
-                    child: Column(
-                      children: [
-                        Container(
-                          height: 30,
-                          width: 30,
-                          color: Color.fromARGB(255, 126, 142, 248),
-                          child: Image.asset('assets/sejarah.png',
-                          height: 15,
-                          width: 15,
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(top: 8.0),
-                          child: Text("Wisata Budaya",
-                          style: TextStyle(
-                            fontSize: 11
-                          ),),
-                        )
-                      ],
-                    ),
-                    onTap: () {
-                          Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => CategoryPage(dataCat: "Wisata Budaya",)),
-                        );
-                        },
-                  ),
-                ],
-              ),
-              SizedBox(height: 20,),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  InkWell(
-                    child: Column(
-                      children: [
-                        Container(
-                          height: 30,
-                          width: 30,
-                          color: Color.fromARGB(255, 251, 186, 184),
-                          child: Image.asset('assets/Mosque.png',
-                          height: 15,
-                          width: 15,
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(top: 8.0),
-                          child: Text("Wisata Religi",
-                          style: TextStyle(
-                            fontSize: 11
-                          ),),
-                        )
-                      ],
-                    ),
-                    onTap: () {
-                          Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => CategoryPage(dataCat: "Wisata Religi",)),
-                        );
-                        },
-                  ),
-                  InkWell(
-                    child: Column(
-                      children: [
-                        Container(
-                          height: 30,
-                          width: 30,
-                          color: Color.fromARGB(255, 167, 147, 244),
-                          child: Image.asset('assets/topi.png',
-                          height: 15,
-                          width: 15,
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(top: 8.0),
-                          child: Text("Wisata Cerdas",
-                          style: TextStyle(
-                            fontSize: 11
-                          ),),
-                        )
-                      ],
-                    ),
-                    onTap: () {
-                          Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => CategoryPage(dataCat: "Wisata Cerdas",)),
-                        );
-                        },
-                  ),
-                  InkWell(
-                    child: Column(
-                      children: [
-                        Container(
-                          height: 30,
-                          width: 30,
-                          color: Color.fromARGB(255, 255, 231, 161),
-                          child: Image.asset('assets/farm.png',
-                          height: 15,
-                          width: 15,
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(top: 8.0),
-                          child: Text("Wisata Pertani",
-                          style: TextStyle(
-                            fontSize: 11
-                          ),),
-                        ),
-                      ],
-                    ),
-                    onTap: () {
-                          Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => CategoryPage(dataCat: "Wisata Pertani",)),
-                        );
-                        },
-                  ),
-                ],
-              )
-            ],
-          ),     
+            ),
+          ],
         ),
       ),
     );

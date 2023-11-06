@@ -12,7 +12,8 @@ class Searchpage extends StatefulWidget {
 }
 
 class _SearchpageState extends State<Searchpage> {
-  List<HomepageContents> filteredsContents = []; // Daftar konten yang sudah difilter
+  List<HomepageContents> filteredsContents =
+      []; // Daftar konten yang sudah difilter
   List<HomepageContents> allContents = contents; // Daftar semua konten
 
   void updateContent(String value) {
@@ -70,14 +71,14 @@ class _SearchpageState extends State<Searchpage> {
                   itemCount: filteredsContents.length,
                   itemBuilder: (context, index) => ListTile(
                     onTap: () {
-                      dataTitle = filteredsContents[index].title;
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) =>
-                              MainTour(data: dataTitle),
-                        ),
-                      );
+                      // dataTitle = filteredsContents[index].title;
+                      // Navigator.push(
+                      //   context,
+                      //   MaterialPageRoute(
+                      //     builder: (context) =>
+                      //         MainTour(data: dataTitle),
+                      //   ),
+                      // );
                     },
                     contentPadding: EdgeInsets.all(25),
                     title: Text(
