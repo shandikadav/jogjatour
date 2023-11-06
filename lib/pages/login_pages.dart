@@ -160,7 +160,7 @@ class LoginPages extends StatelessWidget {
                       style: TextStyle(fontSize: 13),
                     ),
                     style: ElevatedButton.styleFrom(
-                        primary: Color.fromARGB(255, 8, 130, 149),
+                        backgroundColor: Color.fromARGB(255, 8, 130, 149),
                         minimumSize: Size(335, 45)),
                   ),
                 ),
