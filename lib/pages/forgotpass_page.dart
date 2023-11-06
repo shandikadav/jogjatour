@@ -3,99 +3,87 @@ import 'package:jogjatour/pages/main_pages.dart';
 import 'package:flutter/material.dart';
 
 class ForgotPassPage extends StatelessWidget {
-  const ForgotPassPage({super.key});
-
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setSystemUIOverlayStyle(
-        SystemUiOverlayStyle(statusBarColor: Colors.transparent
-            //color set to transperent or set your own color
-            ));
-    return Scaffold(
-      body: Column(
-        children: [
-          Stack(
+    return AnnotatedRegion<SystemUiOverlayStyle>(
+      value: SystemUiOverlayStyle.dark,
+      child: Scaffold(
+        body: SafeArea(
+            child: Padding(
+          padding: const EdgeInsets.only(left: 20, right: 20),
+          child: Column(
             children: [
-              Container(
-                color: Color.fromARGB(255, 8, 131, 149),
-                height: 250,
-                width: double.infinity,
-              ),
-              Padding(
-                padding: const EdgeInsets.only(top: 40, left: 150),
-                child: Container(
-                  width: 208,
-                  height: 214,
-                  decoration: BoxDecoration(
-                      color: Color.fromARGB(50, 5, 191, 219),
-                      shape: BoxShape.circle),
+              Expanded(
+                child: ListView(
+                  children: [
+                    SizedBox(
+                      height: 80,
+                    ),
+                    Text(
+                      "Lupa Password",
+                      style: TextStyle(fontSize: 32),
+                    ),
+                    SizedBox(
+                      height: 6,
+                    ),
+                    Text("Masukkan Email akun untuk mereset password",
+                        style: TextStyle(
+                          fontSize: 14,
+                          color: Color.fromRGBO(0, 0, 0, 0.4),
+                        )),
+                    SizedBox(
+                      height: 60,
+                    ),
+                    Text("Email",
+                        style: TextStyle(
+                          fontSize: 16,
+                          color: Color.fromRGBO(0, 0, 0, 0.6),
+                        )),
+                    SizedBox(
+                      height: 6,
+                    ),
+                    SizedBox(
+                      height: 38,
+                      child: TextField(
+                        decoration: InputDecoration(
+                            contentPadding: EdgeInsets.all(10),
+                            border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(25.0))),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 70,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 40),
+                      child: ElevatedButton(
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: ((context) => const MainPages())));
+                        },
+                        child: Text(
+                          "Kirim",
+                          style: TextStyle(
+                              fontWeight: FontWeight.w700, fontSize: 18),
+                        ),
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Color.fromRGBO(5, 191, 219, 1),
+                          shape: StadiumBorder(),
+                          fixedSize: Size(200, 52),
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 16,
+                    ),
+                  ],
                 ),
-              ),
-              Container(
-                width: 208,
-                height: 214,
-                decoration: BoxDecoration(
-                    color: Color.fromARGB(100, 5, 191, 219),
-                    shape: BoxShape.circle),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(top: 120, left: 20),
-                child: Text(
-                  "Lupa Password",
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 26,
-                      fontWeight: FontWeight.bold),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(top: 160, left: 20),
-                child: Text(
-                  "Masukkan Email untuk melakukan reset Password",
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 14,
-                      fontWeight: FontWeight.w300),
-                ),
-              ),
-              SizedBox(
-                height: 20,
               ),
             ],
           ),
-          SizedBox(
-            height: 20,
-          ),
-          Padding(
-            padding: const EdgeInsets.only(top: 20, left: 20, right: 20),
-            child: TextField(
-              decoration: InputDecoration(
-                filled: true,
-                fillColor: Color.fromARGB(255, 246, 246, 246),
-                labelText: 'Masukkan Email',
-                labelStyle:
-                    TextStyle(color: Color.fromARGB(255, 169, 169, 169)),
-                border: InputBorder.none,
-              ),
-              style: TextStyle(fontSize: 14),
-            ),
-          ),
-          SizedBox(
-            height: 20,
-          ),
-          Center(
-            child: ElevatedButton(
-              onPressed: () {},
-              child: Text(
-                'Lanjutkan',
-                style: TextStyle(fontSize: 13),
-              ),
-              style: ElevatedButton.styleFrom(
-                  primary: Color.fromARGB(255, 8, 130, 149),
-                  minimumSize: Size(335, 45)),
-            ),
-          ),
-        ],
+        )),
       ),
     );
   }

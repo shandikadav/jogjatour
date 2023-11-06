@@ -109,8 +109,7 @@ class SignInPages extends StatelessWidget {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) =>
-                                      const ForgotPassPage()));
+                                  builder: (context) => ForgotPassPage()));
                         },
                         child: Text("Lupa Password?",
                             style: TextStyle(
