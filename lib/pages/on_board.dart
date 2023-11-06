@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:jogjatour/pages/login_pages.dart';
+import 'package:jogjatour/pages/signin_page.dart';
 import '../contents_onboarding.dart';
 
 class OnBoardingPages extends StatefulWidget {
@@ -107,7 +107,8 @@ class _OnBoardingPagesState extends State<OnBoardingPages> {
               child: TextButton(
                 onPressed: () {
                   if (currentIndex == contents.length - 1) {
-                    Navigator.push(context, MaterialPageRoute(builder: (_)=> LoginPages()));
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (_) => LoginPages()));
                   }
                   _controller.nextPage(
                       duration: Duration(milliseconds: 100),

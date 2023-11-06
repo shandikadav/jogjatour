@@ -1,5 +1,5 @@
 import 'package:flutter/services.dart';
-import 'package:jogjatour/pages/login_pages.dart';
+import 'package:jogjatour/pages/signin_page.dart';
 import 'package:flutter/material.dart';
 
 class RegisterPage extends StatelessWidget {
