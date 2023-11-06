@@ -13,8 +13,8 @@ class _SplashPagesState extends State<SplashPages> {
   void initState() {
     // TODO: implement initState
 
-    Timer(Duration(seconds: 2),
-        (() => Navigator.pushNamed(context, '/login')));
+    Timer(
+        Duration(seconds: 2), (() => Navigator.pushNamed(context, '/signin')));
 
     super.initState();
   }
