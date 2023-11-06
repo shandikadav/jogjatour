@@ -1,8 +1,5 @@
 import 'package:flutter/services.dart';
-import 'package:jogjatour/pages/forgotpass_page.dart';
 import 'package:jogjatour/pages/main_pages.dart';
-import 'package:jogjatour/pages/signup_page.dart';
-import 'package:jogjatour/theme.dart';
 import 'package:flutter/material.dart';
 
 class ForgotPassPage extends StatelessWidget {

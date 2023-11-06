@@ -4,7 +4,6 @@ import 'package:jogjatour/pages/favorite.dart';
 import 'package:jogjatour/pages/homepages.dart';
 import 'package:jogjatour/pages/signin_page.dart';
 import 'package:jogjatour/pages/main_pages.dart';
-import 'package:jogjatour/pages/on_board.dart';
 import 'package:jogjatour/pages/profile.dart';
 import 'package:jogjatour/pages/searchpage.dart';
 import 'package:jogjatour/pages/splash_page.dart';
@@ -28,8 +27,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       routes: {
         '/': (context) => SplashPages(),
-        '/on-boarding': (context) => OnBoardingPages(),
-        '/login': (context) => LoginPages(),
+        '/signin': (context) => SignInPages(),
         '/mainpage': (context) => MainPages(),
         '/homepage': (context) => HomePages(),
         '/search': (context) => Searchpage(),

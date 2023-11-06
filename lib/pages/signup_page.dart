@@ -3,9 +3,7 @@ import 'package:jogjatour/pages/main_pages.dart';
 import 'package:flutter/material.dart';
 import 'package:jogjatour/pages/signin_page.dart';
 
-class RegisterPage extends StatelessWidget {
-  const RegisterPage({super.key});
-
+class SignUpPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AnnotatedRegion<SystemUiOverlayStyle>(
