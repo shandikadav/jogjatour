@@ -43,12 +43,12 @@ class ForgotPassPage extends StatelessWidget {
                       height: 6,
                     ),
                     SizedBox(
-                      height: 38,
+                      height: 40,
                       child: TextField(
                         decoration: InputDecoration(
                             contentPadding: EdgeInsets.all(10),
                             border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(25.0))),
+                                borderRadius: BorderRadius.circular(12.0))),
                       ),
                     ),
                     SizedBox(

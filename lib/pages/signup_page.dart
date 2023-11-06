@@ -1,5 +1,4 @@
 import 'package:flutter/services.dart';
-import 'package:jogjatour/pages/main_pages.dart';
 import 'package:flutter/material.dart';
 import 'package:jogjatour/pages/signin_page.dart';
 
@@ -44,12 +43,12 @@ class SignUpPage extends StatelessWidget {
                       height: 6,
                     ),
                     SizedBox(
-                      height: 38,
+                      height: 40,
                       child: TextField(
                         decoration: InputDecoration(
                             contentPadding: EdgeInsets.all(10),
                             border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(25.0))),
+                                borderRadius: BorderRadius.circular(12.0))),
                       ),
                     ),
                     SizedBox(
@@ -64,12 +63,12 @@ class SignUpPage extends StatelessWidget {
                       height: 6,
                     ),
                     SizedBox(
-                      height: 38,
+                      height: 40,
                       child: TextField(
                         decoration: InputDecoration(
                             contentPadding: EdgeInsets.all(10),
                             border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(25.0))),
+                                borderRadius: BorderRadius.circular(12.0))),
                       ),
                     ),
                     SizedBox(
@@ -84,13 +83,13 @@ class SignUpPage extends StatelessWidget {
                       height: 6,
                     ),
                     SizedBox(
-                      height: 38,
+                      height: 40,
                       child: TextField(
                         decoration: InputDecoration(
                             contentPadding: EdgeInsets.all(10),
                             suffixIcon: Icon(Icons.remove_red_eye),
                             border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(25.0))),
+                                borderRadius: BorderRadius.circular(12.0))),
                         obscureText: true,
                       ),
                     ),
@@ -106,13 +105,13 @@ class SignUpPage extends StatelessWidget {
                       height: 6,
                     ),
                     SizedBox(
-                      height: 38,
+                      height: 40,
                       child: TextField(
                         decoration: InputDecoration(
                             contentPadding: EdgeInsets.all(10),
                             suffixIcon: Icon(Icons.remove_red_eye),
                             border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(25.0))),
+                                borderRadius: BorderRadius.circular(12.0))),
                         obscureText: true,
                       ),
                     ),
@@ -122,12 +121,7 @@ class SignUpPage extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 40),
                       child: ElevatedButton(
-                        onPressed: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: ((context) => const MainPages())));
-                        },
+                        onPressed: () {},
                         child: Text(
                           "Daftar",
                           style: TextStyle(
