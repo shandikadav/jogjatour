@@ -4,9 +4,7 @@ import 'package:jogjatour/pages/main_pages.dart';
 import 'package:jogjatour/pages/signup_page.dart';
 import 'package:flutter/material.dart';
 
-class LoginPages extends StatelessWidget {
-  const LoginPages({super.key});
-
+class SignInPages extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AnnotatedRegion<SystemUiOverlayStyle>(
@@ -140,7 +138,7 @@ class LoginPages extends StatelessWidget {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const RegisterPage()));
+                                builder: (context) => SignUpPage()));
                       },
                       child: Text("Buat akun",
                           style: TextStyle(

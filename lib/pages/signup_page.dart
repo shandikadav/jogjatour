@@ -1,10 +1,7 @@
 import 'package:flutter/services.dart';
-import 'package:jogjatour/pages/forgotpass_page.dart';
-import 'package:jogjatour/pages/login_pages.dart';
 import 'package:jogjatour/pages/main_pages.dart';
-import 'package:jogjatour/pages/signup_page.dart';
-import 'package:jogjatour/theme.dart';
 import 'package:flutter/material.dart';
+import 'package:jogjatour/pages/signin_page.dart';
 
 class RegisterPage extends StatelessWidget {
   const RegisterPage({super.key});
@@ -166,7 +163,7 @@ class RegisterPage extends StatelessWidget {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const LoginPages()));
+                                builder: (context) => SignInPages()));
                       },
                       child: Text("Masuk",
                           style: TextStyle(
