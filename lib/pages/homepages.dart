@@ -16,7 +16,7 @@ class HomePages extends StatelessWidget {
         child: ListView(
           children: [
             Padding(
-              padding: const EdgeInsets.fromLTRB(22, 27, 22, 0),
+              padding: const EdgeInsets.fromLTRB(22, 27, 22, 20),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -47,6 +47,8 @@ class HomePages extends StatelessWidget {
                       ),
                       IconButton(
                         onPressed: () {},
+                        padding: EdgeInsets.zero,
+                        constraints: BoxConstraints(),
                         icon: Icon(Icons.notifications_none_outlined),
                         iconSize: 30,
                       )
@@ -127,90 +129,16 @@ class HomePages extends StatelessWidget {
                     padding: const EdgeInsets.only(top: 10, bottom: 8),
                     child: CarouselSlider(
                       items: [
-                        Container(
-                          width: 185,
-                          height: 230,
-                          child: Card(
-                            color: Colors.white,
-                            child: Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Image.asset('assets/jalan_malioboro.png'),
-                                  SizedBox(
-                                    height: 6,
-                                  ),
-                                  Text('Jalan Malioboro'),
-                                  SizedBox(
-                                    height: 7,
-                                  ),
-                                  Row(
-                                    children: [
-                                      Icon(
-                                        Icons.location_on,
-                                        color: Color(0xFF05BFDB),
-                                        size: 20,
-                                      ),
-                                      Expanded(
-                                        child: Text(
-                                          'Sosromenduran, Gedong Tengen, Kota Yogyakarta, Daerah Istimewa Yogyakarta',
-                                          maxLines: 2,
-                                          overflow: TextOverflow.ellipsis,
-                                          style: TextStyle(
-                                            fontSize: 8,
-                                          ),
-                                        ),
-                                      ),
-                                    ],
-                                  )
-                                ],
-                              ),
-                            ),
-                          ),
-                        ),
-                        Container(
-                          width: 185,
-                          height: 230,
-                          child: Card(
-                            color: Colors.white,
-                            child: Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Image.asset('assets/jalan_malioboro.png'),
-                                  SizedBox(
-                                    height: 6,
-                                  ),
-                                  Text('Umbul Saren'),
-                                  SizedBox(
-                                    height: 7,
-                                  ),
-                                  Row(
-                                    children: [
-                                      Icon(
-                                        Icons.location_on,
-                                        color: Color(0xFF05BFDB),
-                                        size: 20,
-                                      ),
-                                      Expanded(
-                                        child: Text(
-                                          'Wedomartani, Sleman, Kabupaten Sleman, Daerah Istimewa Yogyakarta',
-                                          maxLines: 2,
-                                          overflow: TextOverflow.ellipsis,
-                                          style: TextStyle(
-                                            fontSize: 8,
-                                          ),
-                                        ),
-                                      ),
-                                    ],
-                                  )
-                                ],
-                              ),
-                            ),
-                          ),
-                        ),
+                        cardSlider(
+                            title: 'Jalan Malioboro',
+                            alamat:
+                                'Sosromenduran, Gedong Tengen, Kota Yogyakarta, Daerah Istimewa Yogyakarta',
+                            image: 'assets/jalan_malioboro.png'),
+                        cardSlider(
+                            title: 'Umbul Saren',
+                            alamat:
+                                'Wedomartani, Sleman, Kabupaten Sleman, Daerah Istimewa Yogyakarta',
+                            image: 'assets/umbul_saren.png'),
                       ],
                       options: CarouselOptions(
                         height: 230,
@@ -243,11 +171,202 @@ class HomePages extends StatelessWidget {
                         ),
                       )
                     ],
-                  )
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  destinasiTerdekat(
+                    title: 'Umbul Saren',
+                    alamat:
+                        'Wedomartani, Sleman, Kabupaten Sleman, Daerah Istimewa Yogyakarta',
+                    image: 'assets/umbul_saren.png',
+                    jarak: '4 km',
+                  ),
+                  SizedBox(
+                    height: 18,
+                  ),
+                  destinasiTerdekat(
+                    title: 'Jalan Malioboro',
+                    alamat:
+                        'Sosromenduran, Gedong Tengen, Kota Yogyakarta, Daerah Istimewa Yogyakarta',
+                    image: 'assets/jalan_malioboro.png',
+                    jarak: '7.5 km',
+                  ),
+                  destinasiTerdekat(
+                    title: 'Umbul Saren',
+                    alamat:
+                        'Wedomartani, Sleman, Kabupaten Sleman, Daerah Istimewa Yogyakarta',
+                    image: 'assets/umbul_saren.png',
+                    jarak: '4 km',
+                  ),
+                  SizedBox(
+                    height: 18,
+                  ),
+                  destinasiTerdekat(
+                    title: 'Jalan Malioboro',
+                    alamat:
+                        'Sosromenduran, Gedong Tengen, Kota Yogyakarta, Daerah Istimewa Yogyakarta',
+                    image: 'assets/jalan_malioboro.png',
+                    jarak: '7.5 km',
+                  ),
                 ],
               ),
             ),
           ],
+        ),
+      ),
+    );
+  }
+}
+
+class destinasiTerdekat extends StatelessWidget {
+  final String title;
+  final String alamat;
+  final String image;
+  final String jarak;
+
+  destinasiTerdekat(
+      {required this.title,
+      required this.alamat,
+      required this.image,
+      required this.jarak});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: double.infinity,
+      height: 80,
+      decoration: BoxDecoration(
+        color: Colors.white,
+      ),
+      child: Card(
+        margin: EdgeInsets.zero,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+        elevation: 3,
+        child: Padding(
+          padding: const EdgeInsets.all(5),
+          child: Row(
+            children: [
+              Image.asset(image),
+              SizedBox(
+                width: 10,
+              ),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    title,
+                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
+                  ),
+                  SizedBox(
+                    height: 4,
+                  ),
+                  Container(
+                    width: 170,
+                    child: Row(
+                      children: [
+                        Icon(
+                          Icons.location_on,
+                          color: Color(0xFF05BFDB),
+                          size: 20,
+                        ),
+                        Expanded(
+                          child: Text(
+                            alamat,
+                            maxLines: 2,
+                            overflow: TextOverflow.ellipsis,
+                            style: TextStyle(
+                              fontSize: 8,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(
+                width: 41,
+              ),
+              Column(
+                // crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  Container(
+                    width: 40,
+                    height: 13,
+                    decoration: BoxDecoration(
+                      color: Color(0xFF05BFDB),
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                    child: Center(
+                      child: Text(
+                        jarak,
+                        style: TextStyle(
+                          fontSize: 8,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ),
+                  )
+                ],
+              )
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class cardSlider extends StatelessWidget {
+  final String title;
+  final String alamat;
+  final String image;
+  cardSlider({required this.title, required this.alamat, required this.image});
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      color: Colors.white,
+      elevation: 4,
+      child: Container(
+        width: 185,
+        height: 230,
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Image.asset(image),
+              SizedBox(
+                height: 6,
+              ),
+              Text(title),
+              SizedBox(
+                height: 7,
+              ),
+              Row(
+                children: [
+                  Icon(
+                    Icons.location_on,
+                    color: Color(0xFF05BFDB),
+                    size: 20,
+                  ),
+                  Expanded(
+                    child: Text(
+                      alamat,
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis,
+                      style: TextStyle(
+                        fontSize: 8,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );
